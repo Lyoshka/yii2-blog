@@ -55,7 +55,7 @@ $listParent = []+ArrayHelper::map(($model->isNewRecord?$model->parents():$model-
                 <div class="box">
                     <div class="box-header">
                         <h3 class="box-title"><?=$this->title?></h3>
-                        <div class="box-tools pull-right">
+                        <div class="box-tools pull-right blog-btn-add">
                             <?= Html::submitButton($model->isNewRecord ? Yii::t('blog', 'Create') :
                                 Yii::t('blog', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
 

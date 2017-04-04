@@ -12,7 +12,7 @@ $count_post = \lyoshka\blog\models\Post::find()->where('isDel != :isDel', [':isD
 ?>
 <div class="default-index">
     <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="small-box bg-yellow">
                 <div class="inner">
                     <h3><?=$count_cat?></h3>
@@ -22,12 +22,12 @@ $count_post = \lyoshka\blog\models\Post::find()->where('isDel != :isDel', [':isD
                     <i class="fa fa-th-list"></i>
                 </div>
                 <a href="/blog/admin/category" class="small-box-footer">
-                    <?=Yii::t('blog','View')?> <i class="fa fa-arrow-circle-right"></i>
+                    <?=Yii::t('blog','View more')?> <i class="fa fa-arrow-circle-right"></i>
                 </a>
             </div>
         </div>
         <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="small-box bg-green">
                 <div class="inner">
                     <h3><?=$count_post?></h3>
@@ -37,7 +37,7 @@ $count_post = \lyoshka\blog\models\Post::find()->where('isDel != :isDel', [':isD
                     <i class="fa fa-list-alt"></i>
                 </div>
                 <a href="/blog/admin/post" class="small-box-footer">
-                    <?=Yii::t('blog','View')?> <i class="fa fa-arrow-circle-right"></i>
+                    <?=Yii::t('blog','View more')?> <i class="fa fa-arrow-circle-right"></i>
                 </a>
             </div>
         </div>

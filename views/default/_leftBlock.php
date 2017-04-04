@@ -17,12 +17,12 @@ $model = new Post();
 </style>
 
 <!--
-<h4><?=Yii::t("app","Search our Posts")?></h4>
+<h4><?=Yii::t('blog',"Search our Posts")?></h4>
 <form action="<?=Yii::$app->urlManager->createUrl("/blog/default")?>" method="get">
     <div class="input-group">
         <input class="form-control input-md" name="PostSearch[term]" id="appendedInputButtons" type="text">
         <span class="input-group-btn">
-                <button class="btn btn-md" type="submit"><?= Yii::t("app","Search")?></button>
+                <button class="btn btn-md" type="submit"><?= Yii::t('blog',"Search")?></button>
             </span>
     </div>
 </form>
@@ -36,7 +36,7 @@ $model = new Post();
 if($items = $model->getRecent())
 {
     echo Html::beginTag('h4');
-    echo Yii::t("app","Recent Posts");
+    echo Yii::t('blog','Recent Posts');
     echo Html::endTag('h4');
 
     echo Html::beginTag('ul',['class'=>'list-unstyled']);
@@ -51,7 +51,7 @@ if($items = $model->getRecent())
 if($items = $cat->getStructure()){
 
     echo Html::beginTag('h4');
-    echo Yii::t("app","Categories");
+    echo Yii::t('blog','Categories');
     echo Html::endTag('h4');
 
     echo Menu::widget([
@@ -74,7 +74,7 @@ if($items = $cat->getStructure()){
 <?php
 if($items = $model->getArchived()){
     echo Html::beginTag('h4');
-    echo Yii::t("app","Archive");
+    echo Yii::t('blog','Archive');
     echo Html::endTag('h4');
     echo Html::beginTag('ul',['class'=>'list-unstyled']);
     foreach ($model->getArchived() as $m){

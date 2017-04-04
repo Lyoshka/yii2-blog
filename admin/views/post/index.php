@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="box">
                     <div class="box-header">
                         <h3 class="box-title"><?=$this->title;?></h3>
-                        <div class="box-tools pull-right">
+                        <div class="box-tools blog-btn-add">
                             <?= Html::a(Yii::t('blog', 'Create Post'), ['create'], ['class' => 'btn btn-success']) ?>
                         </div>
                     </div>
