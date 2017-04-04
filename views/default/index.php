@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 use yii\widgets\ListView;
 
-$this->title = Yii::t('app', 'Blog');
+$this->title = Yii::t('blog', 'Blog');
 
 $dataProvider->pagination = [
     'pageSize'=> 12,
@@ -23,7 +23,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Html::encode($this
         echo ListView::widget([
             'dataProvider' => $dataProvider,
             //'itemOptions' => ['class' => 'col-md-8','tag'=>'div'],
-            //'summary'=>Yii::t('app','List of account codes where increase on receipt or revenues'),
+            //'summary'=>Yii::t('blog','List of account codes where increase on receipt or revenues'),
             'itemView'=>'_itemIndex',
             'options' => ['class' => 'row '],
             'layout'=>"{items}{pager}",

@@ -55,13 +55,13 @@ class Category extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'title' => Yii::t('app', 'Title'),
-            'parent_id' => Yii::t('app', 'Parent ID'),
-            'description' => Yii::t('app', 'Description'),
-            'image' => Yii::t('app', 'Image'),
-            'status' => Yii::t('app', 'Status'),
-            'isdel' => Yii::t('app', 'Isdel'),
+            'id' => Yii::t('blog', 'ID'),
+            'title' => Yii::t('blog', 'Title'),
+            'parent_id' => Yii::t('blog', 'Parent ID'),
+            'description' => Yii::t('blog', 'Description'),
+            'image' => Yii::t('blog', 'Image'),
+            'status' => Yii::t('blog', 'Status'),
+            'isdel' => Yii::t('blog', 'Isdel'),
         ];
     }
 
@@ -70,8 +70,8 @@ class Category extends \yii\db\ActiveRecord
         $lists = [
             /* example list of item alias for a field with name field
             'afield'=>[
-                            0=>Yii::t('app','an alias of 0'),
-                            1=>Yii::t('app','an alias of 1'),
+                            0=>Yii::t('blog','an alias of 0'),
+                            1=>Yii::t('blog','an alias of 1'),
                         ],
             */
         ];

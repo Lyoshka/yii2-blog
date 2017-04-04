@@ -8,8 +8,8 @@ use yii\helpers\Html;
 /* @var $model lyoshka\blog\models\Post */
 
 $this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Blog'), 'url' => ['/admin/blog/default']];
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Posts'), 'url' => ['/admin/blog/post']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('blog', 'Blog'), 'url' => ['/admin/blog/default']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('blog', 'Posts'), 'url' => ['/admin/blog/post']];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
@@ -38,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             'model' => $model,
                             'attributes' => [
                                 [
-                                    'attribute' => Yii::t('app','Author'),
+                                    'attribute' => Yii::t('blog','Author'),
                                     'value' => call_user_func(function ($data){
                                         if($data->author){
                                             return $data->author->username;
@@ -48,7 +48,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 'time',
                                 'tags',
                                 [
-                                    'attribute' => Yii::t('app','Categories'),
+                                    'attribute' => Yii::t('blog','Categories'),
                                     'value' => Post::getRelatedCategories($model),
                                 ],
                                 'title',
@@ -63,7 +63,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     'format'=>'html'
                                 ],
                                 [
-                                    'attribute' => Yii::t('app','isFeatured'),
+                                    'attribute' => Yii::t('blog','isFeatured'),
                                     'format'=>'html',
                                     'value'=>call_user_func(function ($data) {
                                         (!$data->isfeatured)? $class = 'default': $class = 'success';

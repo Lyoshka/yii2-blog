@@ -56,8 +56,8 @@ $listParent = []+ArrayHelper::map(($model->isNewRecord?$model->parents():$model-
                     <div class="box-header">
                         <h3 class="box-title"><?=$this->title?></h3>
                         <div class="box-tools pull-right">
-                            <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') :
-                                Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+                            <?= Html::submitButton($model->isNewRecord ? Yii::t('blog', 'Create') :
+                                Yii::t('blog', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
 
                             <?=Html::a('Отмена', ['index'], ['class' => 'btn btn-default'])?>
                         </div>
@@ -73,20 +73,20 @@ $listParent = []+ArrayHelper::map(($model->isNewRecord?$model->parents():$model-
                                             'type' => SwitchInput::CHECKBOX,
                                             'pluginOptions'=>[
                                                 'handleWidth'=>100,
-                                                'onText'=>Yii::t('app','Active'),
-                                                'offText'=>Yii::t('app','Inactive')
+                                                'onText'=>Yii::t('blog','Active'),
+                                                'offText'=>Yii::t('blog','Inactive')
                                             ]
                                         ]);
                                         ?>
                                     </div>
                                     <div class="col-xs-12">
                                         <?= $form->field($model, 'title')
-                                            ->textInput(['maxlength' => 65,'placeholder'=>Yii::t('app','Title contain a seo keyword if possible')]) ?>
+                                            ->textInput(['maxlength' => 65,'placeholder'=>Yii::t('blog','Title contain a seo keyword if possible')]) ?>
                                     </div>
 
                                 </div>
 
-                                <?= $form->field($model, 'description')->textArea(['maxlength' => 155,'placeholder'=>Yii::t('app','This description also used as meta description')]) ?>
+                                <?= $form->field($model, 'description')->textArea(['maxlength' => 155,'placeholder'=>Yii::t('blog','This description also used as meta description')]) ?>
 
                             </div>
 
@@ -95,7 +95,7 @@ $listParent = []+ArrayHelper::map(($model->isNewRecord?$model->parents():$model-
                                     'model'=>$model,
                                     'attribute'=>'parent_id',
                                     'data' => $listParent,
-                                    'options' => ['placeholder' => Yii::t('app','Select a account parent...')],
+                                    'options' => ['placeholder' => Yii::t('blog','Select a account parent...')],
                                     'pluginOptions' => [
                                         'allowClear' => true
                                     ],
@@ -118,7 +118,7 @@ $listParent = []+ArrayHelper::map(($model->isNewRecord?$model->parents():$model-
                                     ]);
 
                                 }else{
-                                    echo $form->field($model, 'image')->textInput(['placeholder'=>Yii::t('app','Url of image')]);
+                                    echo $form->field($model, 'image')->textInput(['placeholder'=>Yii::t('blog','Url of image')]);
                                 }
                                 ?>
 <!--                                --><?php //if($model->image): ?>

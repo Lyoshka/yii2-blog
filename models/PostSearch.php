@@ -31,8 +31,8 @@ class PostSearch extends \lyoshka\blog\models\Post
     public function attributeLabels()
     {
         return array_merge(parent::attributeLabels(),[
-            'term' => Yii::t('app', 'Title'),
-            'category' => Yii::t('app', 'Category'),
+            'term' => Yii::t('blog', 'Title'),
+            'category' => Yii::t('blog', 'Category'),
 
 
         ]);

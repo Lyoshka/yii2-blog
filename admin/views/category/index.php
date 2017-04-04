@@ -13,8 +13,8 @@ use yii\helpers\Html;
 /* @var $searchModel lyoshka\blog\models\CategorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Categories');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Blog'), 'url' => ['/admin/blog/default']];
+$this->title = Yii::t('blog', 'Categories');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('blog', 'Blog'), 'url' => ['/admin/blog/default']];
 $this->params['breadcrumbs'][] = $this->title;
 
 $module = Yii::$app->getModule('blog');
@@ -28,7 +28,7 @@ $module = Yii::$app->getModule('blog');
                     <div class="box-header">
                         <h3 class="box-title"><?=$this->title;?></h3>
                         <div class="box-tools pull-right">
-                            <?= Html::a(Yii::t('app', 'Create category'), ['create'], ['class' => 'btn btn-success']) ?>
+                            <?= Html::a(Yii::t('blog', 'Create category'), ['create'], ['class' => 'btn btn-success']) ?>
                         </div>
                     </div>
                     <div class="box-body ">
@@ -49,7 +49,7 @@ $module = Yii::$app->getModule('blog');
                                     'filterType'=>GridView::FILTER_SELECT2,
                                     'filterWidgetOptions'=>[
                                         'data'=>ArrayHelper::map($searchModel->parents(),"id","title"),
-                                        'options' => ['placeholder' => Yii::t('app','Select a parent category...')],
+                                        'options' => ['placeholder' => Yii::t('blog','Select a parent category...')],
                                         'pluginOptions' => [
                                             'allowClear' => true
                                         ],
@@ -79,7 +79,7 @@ $module = Yii::$app->getModule('blog');
                                     'filter'=>$searchModel::getStatusArray(),
                                     'filterWidgetOptions'=>[
                                         'pluginOptions'=>['allowClear'=>true],
-                                        'options' => ['placeholder' => Yii::t('app','Select a status...')],
+                                        'options' => ['placeholder' => Yii::t('blog','Select a status...')],
                                     ],
                                 ],
                                 // 'isdel',

@@ -57,19 +57,19 @@ class Post extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'title' => Yii::t('app', 'Title'),
-            'description' => Yii::t('app', 'Description'),
-            'content' => Yii::t('app', 'Content'),
-            'tags' => Yii::t('app', 'Tags'),
-            'image' => Yii::t('app', 'Image'),
-            'author_id' => Yii::t('app', 'Author ID'),
-            'isfeatured' => Yii::t('app', 'isFeatured'),
-            'status' => Yii::t('app', 'Status'),
-            'time' => Yii::t('app', 'Time'),
-            'isdel' => Yii::t('app', 'Isdel'),
-            'authorName' => Yii::t('app', 'Author'),
-            'categories' => Yii::t('app', 'Categories'),
+            'id' => Yii::t('blog', 'ID'),
+            'title' => Yii::t('blog', 'Title'),
+            'description' => Yii::t('blog', 'Description'),
+            'content' => Yii::t('blog', 'Content'),
+            'tags' => Yii::t('blog', 'Tags'),
+            'image' => Yii::t('blog', 'Image'),
+            'author_id' => Yii::t('blog', 'Author ID'),
+            'isfeatured' => Yii::t('blog', 'isFeatured'),
+            'status' => Yii::t('blog', 'Status'),
+            'time' => Yii::t('blog', 'Time'),
+            'isdel' => Yii::t('blog', 'Isdel'),
+            'authorName' => Yii::t('blog', 'Author'),
+            'categories' => Yii::t('blog', 'Categories'),
         ];
     }
 
@@ -78,13 +78,13 @@ class Post extends \yii\db\ActiveRecord
         $lists = [
             /* example list of item alias for a field with name field */
             'status'=>[
-                0=>Yii::t('app','Draft'),
-                1=>Yii::t('app','Published'),
-                2=>Yii::t('app','Archived'),
+                0=>Yii::t('blog','Draft'),
+                1=>Yii::t('blog','Published'),
+                2=>Yii::t('blog','Archived'),
             ],
             'isfeatured'=>[
-                false=>Yii::t('app','No'),
-                true=>Yii::t('app','Featured'),
+                false=>Yii::t('blog','No'),
+                true=>Yii::t('blog','Featured'),
             ],
 
         ];
@@ -211,7 +211,7 @@ class Post extends \yii\db\ActiveRecord
         $count = count($model->blogCatPos);
         if($count == 0)
         {
-            $arrayCategories = Yii::t('app','Not found');
+            $arrayCategories = Yii::t('blog','Not found');
         }
         for ($i = count($model->blogCatPos) ; $i > 0; $i--)
         {

@@ -21,7 +21,7 @@ $assets = \lyoshka\blog\BlogAsset::register($this);
         <h5><?= Html::encode($model->author?$model->author->username:"") ?> <small><?= Html::encode(date('D d M, Y H:m:s',strtotime($model->time))) ?></small></h5>
         <p ><?= Html::encode($model->description) ?></p>
         <p class="pull-right" style="padding-right: 15px;">
-            <?= Html::a(Yii::t('app','Read More'),Url::to(["//blog/default/view","id"=>$model->id,"title"=>$model->title]),['class'=>'btn btn-small btn-default']); ?>
+            <?= Html::a(Yii::t('blog','Read More'),Url::to(["//blog/default/view","id"=>$model->id,"title"=>$model->title]),['class'=>'btn btn-small btn-default']); ?>
         </p>
     </div>
 </div>

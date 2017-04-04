@@ -67,8 +67,8 @@ foreach ($model->blogCatPos as $c)
                     <div class="box-header">
                         <h3 class="box-title"><?=$this->title?></h3>
                         <div class="box-tools pull-right">
-                            <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') :
-                                Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+                            <?= Html::submitButton($model->isNewRecord ? Yii::t('blog', 'Create') :
+                                Yii::t('blog', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
 
                             <?=Html::a('Отмена', ['/admin/blog/post'], ['class' => 'btn btn-default'])?>
                         </div>
@@ -78,22 +78,22 @@ foreach ($model->blogCatPos as $c)
                             <div class="col-md-9">
                                 <div class="row">
                                     <div class="col-xs-7 col-sm-9">
-                                        <?= $form->field($model, 'title')->textInput(['maxlength' => 65,'placeholder'=>Yii::t('app','Title contain a seo keyword if possible')]) ?>
+                                        <?= $form->field($model, 'title')->textInput(['maxlength' => 65,'placeholder'=>Yii::t('blog','Title contain a seo keyword if possible')]) ?>
                                     </div>
                                     <div class="col-xs-5 col-sm-3">
                                         <?= $form->field($model, 'isfeatured')->widget(SwitchInput::classname(), [
                                             'type' => SwitchInput::CHECKBOX,
                                             'pluginOptions'=>[
                                                 'handleWidth'=>100,
-                                                'onText'=>Yii::t('app','Featured'),
-                                                'offText'=>Yii::t('app','No')
+                                                'onText'=>Yii::t('blog','Featured'),
+                                                'offText'=>Yii::t('blog','No')
                                             ]
                                         ]);
                                         ?>
                                     </div>
                                 </div>
                                 <?= $form->field($model, 'description')->textArea(['maxlength' => 155,
-                                    'placeholder'=>Yii::t('app','This description also used as meta description')]) ?>
+                                    'placeholder'=>Yii::t('blog','This description also used as meta description')]) ?>
                                 <?php
                                 $isettings = [
                                     'lang' => substr(Yii::$app->language,0,2),
@@ -145,7 +145,7 @@ foreach ($model->blogCatPos as $c)
 
                                     <?= $form->field($model, 'tags')->widget(Select2::classname(), [
                                         'options' => [
-                                            'placeholder' => Yii::t('app','Put additional tags ...'),
+                                            'placeholder' => Yii::t('blog','Put additional tags ...'),
                                         ],
                                         'data'=>$model->getTags(),
                                         'pluginOptions' => [
@@ -155,13 +155,13 @@ foreach ($model->blogCatPos as $c)
                                     ]) ?>
 
                                     <div clas="form-group">
-                                        <label for="Post[category]"><?= Yii::t('app','Category') ?></label>
+                                        <label for="Post[category]"><?= Yii::t('blog','Category') ?></label>
                                         <?= Select2::widget([
                                             'name' => 'Post[category]',
                                             'data' => $listCategory,
                                             'value'=>$category,
                                             'options' => [
-                                                'placeholder' => Yii::t('app','Select categories ...'),
+                                                'placeholder' => Yii::t('blog','Select categories ...'),
                                                 'multiple' => true
                                             ],
                                         ]);
@@ -170,7 +170,7 @@ foreach ($model->blogCatPos as $c)
 
                                     <?= $form->field($model, 'status')->widget(Select2::classname(), [
                                         'data' => $model->itemAlias('status'),
-                                        'options' => ['placeholder' => Yii::t('app','Select post status ...')],
+                                        'options' => ['placeholder' => Yii::t('blog','Select post status ...')],
                                         'pluginOptions' => [
                                             'allowClear' => false
                                         ],
@@ -193,7 +193,7 @@ foreach ($model->blogCatPos as $c)
                                     }
                                     else
                                     {
-                                        echo $form->field($model, 'image')->textInput(['placeholder'=>Yii::t('app','Url of image')]);
+                                        echo $form->field($model, 'image')->textInput(['placeholder'=>Yii::t('blog','Url of image')]);
                                     }
 
                                     ?>

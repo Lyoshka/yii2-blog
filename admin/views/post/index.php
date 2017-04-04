@@ -12,8 +12,8 @@ use yii\helpers\Html;
 /* @var $searchModel lyoshka\blog\models\PostSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Posts');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Blog'), 'url' => ['/admin/blog/default']];
+$this->title = Yii::t('blog', 'Posts');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('blog', 'Blog'), 'url' => ['/admin/blog/default']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="post-admin">
@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="box-header">
                         <h3 class="box-title"><?=$this->title;?></h3>
                         <div class="box-tools pull-right">
-                            <?= Html::a(Yii::t('app', 'Create Post'), ['create'], ['class' => 'btn btn-success']) ?>
+                            <?= Html::a(Yii::t('blog', 'Create Post'), ['create'], ['class' => 'btn btn-success']) ?>
                         </div>
                     </div>
                     <div class="box-body">
@@ -101,7 +101,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     'filterType'=>GridView::FILTER_SELECT2,
                                     'filterWidgetOptions'=>[
                                         'data'=>$searchModel->itemAlias('isfeatured'),
-                                        'options' => ['placeholder' => Yii::t('app','Is Featured?')],
+                                        'options' => ['placeholder' => Yii::t('blog','Is Featured?')],
                                         'pluginOptions' => [
                                             'allowClear' => true
                                         ],
@@ -118,7 +118,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     'filterType'=>GridView::FILTER_SELECT2,
                                     'filterWidgetOptions'=>[
                                         'data'=>$searchModel->itemAlias('status'),
-                                        'options' => ['placeholder' => Yii::t('app','Filter by status...')],
+                                        'options' => ['placeholder' => Yii::t('blog','Filter by status...')],
                                         'pluginOptions' => [
                                             'allowClear' => true
                                         ],

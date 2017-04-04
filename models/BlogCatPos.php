@@ -44,9 +44,9 @@ class BlogCatPos extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'category_id' => Yii::t('app', 'Category ID'),
-            'post_id' => Yii::t('app', 'Post ID'),
-            'isdel' => Yii::t('app', 'Isdel'),
+            'category_id' => Yii::t('blog', 'Category ID'),
+            'post_id' => Yii::t('blog', 'Post ID'),
+            'isdel' => Yii::t('blog', 'Isdel'),
         ];
     }
 
@@ -55,8 +55,8 @@ class BlogCatPos extends \yii\db\ActiveRecord
         $lists = [
             /* example list of item alias for a field with name field
             'afield'=>[
-                            0=>Yii::t('app','an alias of 0'),
-                            1=>Yii::t('app','an alias of 1'),
+                            0=>Yii::t('blog','an alias of 0'),
+                            1=>Yii::t('blog','an alias of 1'),
                         ],
             */
         ];

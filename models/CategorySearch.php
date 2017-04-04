@@ -18,8 +18,8 @@ class CategorySearch extends Category
     {
         return [
 
-            self::STATUS_ACTIVE => Yii::t('app', 'Active'),
-            self::STATUS_BLOCKED => Yii::t('app', 'Inactive'),
+            self::STATUS_ACTIVE => Yii::t('blog', 'Active'),
+            self::STATUS_BLOCKED => Yii::t('blog', 'Inactive'),
         ];
     }
 

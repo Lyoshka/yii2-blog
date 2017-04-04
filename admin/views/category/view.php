@@ -8,8 +8,8 @@ use yii\widgets\DetailView;
 /* @var $model lyoshka\blog\models\Category */
 
 $this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Blog'), 'url' => ['/admin/blog/default']];
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Categories'), 'url' => ['/admin/blog/category']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('blog', 'Blog'), 'url' => ['/admin/blog/default']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('blog', 'Categories'), 'url' => ['/admin/blog/category']];
 $this->params['breadcrumbs'][] = $this->title;
 
 $module = Yii::$app->getModule('blog');

@@ -37,7 +37,7 @@ class Module extends \yii\base\Module
             'basePath' => '@lyoshka/blog/messages',
             'forceTranslation' => true,
             'fileMap' => [
-                'app' => 'app.php'
+                'blog' => 'blog.php'
             ]
         ];
     }
